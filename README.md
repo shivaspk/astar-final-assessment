@@ -1,2 +1,2 @@
 # astar-final-assessment
-This is pre requites for Final Assessment
+This is prerequisite for Final Assessment
