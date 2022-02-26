@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer
+spec:
+  selector:
+    matchLabels:
+      app: customer
+  template:
+    metadata:
+      labels:
+        app: customer
+    spec:
+      containers:
+      - name: customer
+        image: shivaspk/astar-customer-api
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGOURL
+          value: mongodb://db-mongo/customersdb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer
+spec:
+  type: NodePort
+  selector:
+    app: customer
+  ports:
+  - port: 80
+    targetPort: 3000
+    nodePort: 32222
+  
