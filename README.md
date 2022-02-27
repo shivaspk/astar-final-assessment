@@ -48,12 +48,12 @@ please do a `POST` to `http://localhost:32223/products`
 
 1) Regular User
 
-username: johndoe
+username: `johndoe`
 
-password: John$Doe
+password: `John$Doe`
 
 2) Admin User
 
-username: admin
+username: `admin`
 
-password: admin
+password: `admin`
