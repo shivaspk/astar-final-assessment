@@ -49,9 +49,11 @@ please do a `POST` to `http://localhost:32223/products`
 1) Regular User
 
 username: johndoe
+
 password: John$Doe
 
 2) Admin User
 
 username: admin
+
 password: admin
