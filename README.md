@@ -57,3 +57,8 @@ password: `John$Doe`
 username: `admin`
 
 password: `admin`
+
+> To debug anything on Javascript please use the browser console on Chrome or Microsoft Edge or Firefox
+
+
+> Wish you good luck!
