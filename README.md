@@ -36,3 +36,22 @@ Tips
 
 1) All the JS code that needs to be edited is in `js` folder named `common.js`
 2) Try to complete maximum number of tasks
+
+# To add a new Product
+please do a `POST` to `http://localhost:32223/products`
+`   {
+        "details": "Apple Watch",
+        "price": 350.0
+    }`
+
+# To login to the application use the following users
+
+1) Regular User
+
+username: johndoe
+password: John$Doe
+
+2) Admin User
+
+username: admin
+password: admin
