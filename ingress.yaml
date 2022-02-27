@@ -23,3 +23,10 @@ spec:
             name: inventory
             port:
               number: 80
+      - path: /products
+        pathType: Prefix
+        backend:
+          service:
+            name: product
+            port:
+              number: 80

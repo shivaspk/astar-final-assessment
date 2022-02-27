@@ -13,16 +13,13 @@ spec:
     spec:
       containers:
       - name: customer
-        image: shivaspk/astar-customer-api
+        image: shivaspk/neo-customer:1.0.0
         resources:
           limits:
-            memory: "128Mi"
+            memory: "1024Mi"
             cpu: "500m"
         ports:
-        - containerPort: 3000
-        env:
-        - name: MONGOURL
-          value: mongodb://db-mongo/customersdb
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -34,6 +31,6 @@ spec:
     app: customer
   ports:
   - port: 80
-    targetPort: 3000
-    nodePort: 32222
+    targetPort: 8080
+    nodePort: 32225
   

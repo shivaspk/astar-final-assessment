@@ -13,24 +13,13 @@ spec:
     spec:
       containers:
       - name: inventory
-        image: shivaspk/astar-inventorys-api
+        image: shivaspk/neo-inventory:1.0.0
         resources:
           limits:
             memory: "1024Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080
-        env:
-          - name: SPRING_DATASOURCE_URL
-            value: jdbc:sqlserver://db-mssql
-          - name: SPRING_DATASOURCE_USERNAME
-            value: sa
-          - name: SPRING_DATASOURCE_PASSWORD
-            value: January2018
-          - name: SPRING_RABBITMQ_HOST
-            value: rabbitmq           
-          - name: SPRING_RABBITMQ_PORT
-            value: "5672"   
 ---
 apiVersion: v1
 kind: Service
@@ -43,5 +32,5 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-    nodePort: 31244
+    nodePort: 32224
 
